@@ -1,0 +1,27 @@
+{
+    "head": {
+      "col_01": "Nombre de la cookie",
+      "col_02": "Objetivo",
+      "col_03": "Tercero"
+    },
+    "row_01": {
+      "col_01": "cookieyes-consent",
+      "col_02": "Esta cookie gestiona tus preferencias de consentimiento.\n Cookie persistente - 1 año",
+      "col_03": "CookieYes"
+    },
+    "row_02": {
+      "col_01": "C.C.",
+      "col_02": "Esta cookie se utiliza para prevenir fraudes.\n Cookie de sesión",
+      "col_03": ""
+    },
+    "row_03": {
+      "col_01": "_cc-x",
+      "col_02": "Esta cookie se utiliza para prevenir fraudes.\n Cookie persistente: 1 segundo",
+      "col_03": ""
+    },
+    "row_04": {
+      "col_01": "_cid_cc",
+      "col_02": "Esta cookie se utiliza para prevenir fraudes.\n Cookie persistente: 1 segundo",
+      "col_03": ""
+    }
+}
