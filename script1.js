@@ -10,34 +10,39 @@ async function loadTableData() {
 
         const table = document.querySelector("#myTable");
 
-        // const thead = table.querySelector("thead tr");
-        const thead = table.querySelector("thead tr");
-        thead.appendChild(thead);
+        const thead = document.createElement("thead");
         thead.classList.add("header");
-        thead.classList.add(tr)
 
-        Object.values(data.head).forEach(headerText => {
+        const tr = document.createElement("tr");
+        tr.classList.add("header-row");
+         
+
+        Object.keys(data.head).forEach(headerKey => {
             const th = document.createElement("th");
-            th.textContent = headerText;
-            thead.appendChild(th);
-            th.classList.add("text-head");
+            th.textContent = data.head[headerKey];
+            tr.appendChild(th);
+            tr.classList.add("text-head");
             
         });
 
-        const tbody = table.querySelector("tbody");
+        thead.appendChild(tr);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
         const hr = document.createElement("hr");
+        table.appendChild(tbody);
         tbody.appendChild(hr);
         hr.classList.add("border")
 
-        for (let rowKey in data) {
+        Object.keys(data).forEach(rowKey =>  {
             if (rowKey.startsWith("row_")) {
                 const row = data[rowKey];
 
                 const tr = document.createElement("tr");
 
-                Object.values(row).forEach(cellText => {
+                Object.keys(row).forEach(cellKey => {
                     const td = document.createElement("td");
-                    td.textContent = cellText;
+                    td.textContent = row[cellKey];
                     tr.appendChild(td);
                     tr.classList.add("text-row");
                     td.classList.add("text-data");
@@ -48,9 +53,8 @@ async function loadTableData() {
                 const hr = document.createElement("hr");
                 tbody.appendChild(hr);
                 hr.classList.add("border");
-
             }
-        }
+        })
 
     } catch (error) {
         console.error('Error:', error);

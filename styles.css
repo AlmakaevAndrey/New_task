@@ -20,23 +20,22 @@ body {
     display: flex;
     align-items:center;
     justify-content: space-between;
-    /* gap: 120px; */
 }
 
-.text-head:nth-child(1){
+th:nth-child(1){
+    width: 20vw;
+    display: flex;
+    justify-content: start;
+} 
+
+th:nth-child(2) {
+    width: 45vw;
+    display: flex;
+    justify-content: start;
+}
+
+ th:nth-child(3) {
     width: 25vw;
-    display: flex;
-    justify-content: start;
-}
-
-.text-head:nth-child(2) {
-    width: 40vw;
-    display: flex;
-    justify-content: start;
-}
-
-th:nth-child(3) {
-    width: 35vw;
     display: flex;
     justify-content: start;
 }
@@ -45,35 +44,24 @@ th:nth-child(3) {
     margin: 0 0 0 20px;
     height: 50px;
     display: flex;
-    align-items:center;
+    align-items:start;
     justify-content: space-between;
-    /* gap: 50px; */
+}
+
+.border {
+    width: 95vw;
 }
 
 .text-data:nth-child(1){
-    width: 25vw;
+    width: 20vw;
 }
 
 .text-data:nth-child(2) {
-    width: 40vw;
-    white-space: pre-wrap; 
+    width: 45vw;
+    white-space: pre-line;
 }
 
 .text-data:nth-child(3) {
-    width: 35vw;
+    width: 25vw;
 }
 
-.divider {
-    position: relative;
-    padding: 20px 0;
-}
-
-.divider::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px; /* Толщина линии */
-    background-color: #3498db; 
-}
