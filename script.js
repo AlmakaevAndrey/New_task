@@ -25,9 +25,9 @@ async function loadTableData() {
         });
 
         const tbody = table.querySelector("tbody");
-        const hr = document.createElement("hr");
-        tbody.appendChild(hr);
-        hr.classList.add("border")
+        // const hr = document.createElement("hr");
+        // tbody.appendChild(hr);
+        // hr.classList.add("border")
 
         for (let rowKey in data) {
             if (rowKey.startsWith("row_")) {
@@ -45,9 +45,9 @@ async function loadTableData() {
 
                 tbody.appendChild(tr);
 
-                const hr = document.createElement("hr");
-                tbody.appendChild(hr);
-                hr.classList.add("border");
+                // const hr = document.createElement("hr");
+                // tbody.appendChild(hr);
+                // hr.classList.add("border");
 
             }
         }

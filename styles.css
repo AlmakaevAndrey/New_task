@@ -15,11 +15,12 @@ body {
 }
 
 .header-row {
-    margin: 0 0 0 20px;
-    height: 50px;
+    padding: 10px 10px;
+    min-height: 50px;
     display: flex;
     align-items:center;
     justify-content: space-between;
+    border-bottom: 1px solid black;
 }
 
 th:nth-child(1){
@@ -41,11 +42,12 @@ th:nth-child(2) {
 }
 
 .text-row {
-    margin: 0 0 0 20px;
-    height: 50px;
+    padding: 10px 10px;
+    min-height: 50px;
     display: flex;
     align-items:start;
     justify-content: space-between;
+    border-bottom: 1px solid black;
 }
 
 .border {

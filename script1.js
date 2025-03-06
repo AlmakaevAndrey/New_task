@@ -1,4 +1,4 @@
-async function loadTableData() {
+loadTableData = async() => {
     try {
         const response = await fetch("./localization.json");
 
@@ -22,23 +22,20 @@ async function loadTableData() {
             th.textContent = data.head[headerKey];
             tr.appendChild(th);
             tr.classList.add("text-head");
-            
         });
 
         thead.appendChild(tr);
         table.appendChild(thead);
 
         const tbody = document.createElement("tbody");
-        const hr = document.createElement("hr");
         table.appendChild(tbody);
-        tbody.appendChild(hr);
-        hr.classList.add("border")
 
         Object.keys(data).forEach(rowKey =>  {
             if (rowKey.startsWith("row_")) {
                 const row = data[rowKey];
-
                 const tr = document.createElement("tr");
+                
+                
 
                 Object.keys(row).forEach(cellKey => {
                     const td = document.createElement("td");
@@ -47,12 +44,8 @@ async function loadTableData() {
                     tr.classList.add("text-row");
                     td.classList.add("text-data");
                 });
-
+            
                 tbody.appendChild(tr);
-
-                const hr = document.createElement("hr");
-                tbody.appendChild(hr);
-                hr.classList.add("border");
             }
         })
 
